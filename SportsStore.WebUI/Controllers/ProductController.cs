@@ -1,11 +1,13 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
 using SportsStore.Domain.Abstract;
+using SportsStore.WebUI.Models;
 
 namespace SportsStore.WebUI.Controllers
 {
     public class ProductController : Controller
     {
+        public int PageSize = 4; //изменим это позднее
         private IProductRepository repository;
         
         // позволит Ninject внедрять зависимость хранилища товаров при созда­нии экземпляра класса контроллера
@@ -14,9 +16,22 @@ namespace SportsStore.WebUI.Controllers
             repository = productRepository;
         }
 
-        public ViewResult List()
+        public ViewResult List(int page = 1)
         {
-            return View(repository.Products);
+            ProductsListViewModel viewModel = new ProductsListViewModel
+            {
+                Products = repository.Products
+                .OrderBy(p => p.ProductID)
+                .Skip((page - 1) * PageSize)
+                .Take(PageSize),
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = page,
+                    ItemsPerPage = PageSize,
+                    TotalItems = repository.Products.Count()
+                }
+            };
+            return View(viewModel);
         }
     }
 }

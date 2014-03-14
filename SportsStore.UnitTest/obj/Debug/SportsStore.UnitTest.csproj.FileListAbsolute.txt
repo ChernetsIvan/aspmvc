@@ -1,0 +1,16 @@
+D:\IvanyCH\!Code\8sem\SportsStore\SportsStore.UnitTest\obj\Debug\SportsStore.UnitTest.csprojResolveAssemblyReference.cache
+D:\IvanyCH\!Code\8sem\SportsStore\SportsStore.UnitTest\bin\Debug\SportsStore.UnitTest.dll
+D:\IvanyCH\!Code\8sem\SportsStore\SportsStore.UnitTest\bin\Debug\SportsStore.UnitTest.pdb
+D:\IvanyCH\!Code\8sem\SportsStore\SportsStore.UnitTest\bin\Debug\Moq.dll
+D:\IvanyCH\!Code\8sem\SportsStore\SportsStore.UnitTest\bin\Debug\SportsStore.Domain.dll
+D:\IvanyCH\!Code\8sem\SportsStore\SportsStore.UnitTest\bin\Debug\SportsStore.WebUI.dll
+D:\IvanyCH\!Code\8sem\SportsStore\SportsStore.UnitTest\bin\Debug\EntityFramework.dll
+D:\IvanyCH\!Code\8sem\SportsStore\SportsStore.UnitTest\bin\Debug\Ninject.dll
+D:\IvanyCH\!Code\8sem\SportsStore\SportsStore.UnitTest\bin\Debug\SportsStore.Domain.pdb
+D:\IvanyCH\!Code\8sem\SportsStore\SportsStore.UnitTest\bin\Debug\SportsStore.WebUI.pdb
+D:\IvanyCH\!Code\8sem\SportsStore\SportsStore.UnitTest\bin\Debug\Moq.xml
+D:\IvanyCH\!Code\8sem\SportsStore\SportsStore.UnitTest\bin\Debug\EntityFramework.xml
+D:\IvanyCH\!Code\8sem\SportsStore\SportsStore.UnitTest\bin\Debug\Ninject.pdb
+D:\IvanyCH\!Code\8sem\SportsStore\SportsStore.UnitTest\bin\Debug\Ninject.xml
+D:\IvanyCH\!Code\8sem\SportsStore\SportsStore.UnitTest\obj\Debug\SportsStore.UnitTest.dll
+D:\IvanyCH\!Code\8sem\SportsStore\SportsStore.UnitTest\obj\Debug\SportsStore.UnitTest.pdb
