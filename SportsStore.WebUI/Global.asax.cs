@@ -25,7 +25,7 @@ namespace SportsStore.WebUI
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapRoute(
                 null,                          //нам не нужно указывать имя
-                "Page{page}",
+                "Page{page}", 
                 new { Controller = "Product", Action = "List" }
                 );
             routes.MapRoute(
