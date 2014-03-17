@@ -24,15 +24,33 @@ namespace SportsStore.WebUI
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapRoute(
-                null,                          //нам не нужно указывать имя
-                "Page{page}",
-                new { Controller = "Product", Action = "List" }
+                null,
+                "",                          //Соответствует только пустой URL, т.е. /
+                new { controller = "Product", action = "List", 
+                    category = (string)null, page = 1 }
                 );
             routes.MapRoute(
-                "Default", // Route name
-                "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Product", action = "List", id = UrlParameter.Optional } // Parameter defaults
-            );
+                null,
+                "Page{page}", //Соответствует /Page2, /Page123, но не /PageXYZ
+                new { controller = "Product", action = "List", 
+                    category = (string)null }, 
+                new {page = @"\d+"} //Ограничения: страница должна быть числовой
+                );
+            routes.MapRoute(
+                null,
+                "{category}", // Соответствует /категория или /AnythingWithNoSlash
+                new { controller = "Product", action = "List", page = 1 }
+                );
+            routes.MapRoute(
+                null,                          //нам не нужно указывать имя
+                "{category}/Page{page}", //Соответствует /категория/страница 
+                new { Controller = "Product", Action = "List" }, //По умолчанию
+                new { page = @"\d+" } //Ограничения: страница должна быть числовой
+                );
+            routes.MapRoute(
+                null,
+                "{controller}/{action}" // URL with parameters
+                );
 
         }
 
