@@ -147,5 +147,21 @@ namespace SportsStore.UnitTest
             Assert.AreEqual(results[2], "Plums");
         }
 
+        [TestMethod]
+        public void Indicates_Selected_Category()
+        {
+            Mock<IProductRepository> mock = new Mock<IProductRepository>();
+            mock.Setup(m=>m.Products).Returns(new Product[]{
+                new Product{ProductID = 1, Name = "P1", Category = "Apples"},
+                new Product{ProductID = 4, Name = "P2", Category = "Oranges"}
+            }.AsQueryable();
+            NavController target = new NavController(mock.Object);
+            string categoryToSelect = "Apples";
+
+            string result = target.Menu(categoryToSelect).ViewBag.SelectedCategory;
+
+            Assert.AreEqual(categoryToSelect, result);
+
+        }
     }
 }
