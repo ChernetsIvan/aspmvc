@@ -147,6 +147,7 @@ namespace SportsStore.UnitTest
             Assert.AreEqual(results[2], "Plums");
         }
 
+<<<<<<< HEAD
         [TestMethod]
         public void Indicates_Selected_Category()
         {
@@ -163,5 +164,7 @@ namespace SportsStore.UnitTest
             Assert.AreEqual(categoryToSelect, result);
 
         }
+=======
+>>>>>>> styling
     }
 }
