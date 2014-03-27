@@ -176,3 +176,33 @@ E:\internett\SportsStore.WebUI\bin\System.Web.Razor.xml
 E:\internett\SportsStore.WebUI\bin\System.Web.WebPages.xml
 E:\internett\SportsStore.WebUI\bin\System.Web.WebPages.Deployment.xml
 E:\internett\SportsStore.WebUI\bin\System.Web.WebPages.Razor.xml
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\SportsStore.WebUI.dll
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\SportsStore.WebUI.pdb
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\EntityFramework.dll
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\EntityFramework.SqlServer.dll
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\Microsoft.Web.Infrastructure.dll
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\Moq.dll
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\Ninject.dll
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\SportsStore.Domain.dll
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\System.Web.Helpers.dll
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\System.Web.Mvc.dll
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\System.Web.Providers.dll
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\System.Web.Razor.dll
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\System.Web.WebPages.Deployment.dll
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\System.Web.WebPages.dll
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\System.Web.WebPages.Razor.dll
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\SportsStore.Domain.pdb
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\EntityFramework.xml
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\EntityFramework.SqlServer.xml
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\Moq.xml
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\Ninject.pdb
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\Ninject.xml
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\System.Web.Helpers.xml
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\System.Web.Mvc.xml
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\System.Web.Razor.xml
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\System.Web.WebPages.xml
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\System.Web.WebPages.Deployment.xml
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\bin\System.Web.WebPages.Razor.xml
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\obj\Debug\SportsStore.WebUI.csprojResolveAssemblyReference.cache
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\obj\Debug\SportsStore.WebUI.dll
+D:\IvanyCH\!Code\8sem\New folder\SportsStore.WebUI\obj\Debug\SportsStore.WebUI.pdb
