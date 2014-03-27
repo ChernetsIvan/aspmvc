@@ -14,3 +14,6 @@ D:\IvanyCH\!Code\8sem\SportsStore\SportsStore.UnitTest\bin\Debug\Ninject.pdb
 D:\IvanyCH\!Code\8sem\SportsStore\SportsStore.UnitTest\bin\Debug\Ninject.xml
 D:\IvanyCH\!Code\8sem\SportsStore\SportsStore.UnitTest\obj\Debug\SportsStore.UnitTest.dll
 D:\IvanyCH\!Code\8sem\SportsStore\SportsStore.UnitTest\obj\Debug\SportsStore.UnitTest.pdb
+E:\internett\SportsStore.UnitTest\obj\Debug\SportsStore.UnitTest.csprojResolveAssemblyReference.cache
+E:\internett\SportsStore.UnitTest\obj\Debug\SportsStore.UnitTest.dll
+E:\internett\SportsStore.UnitTest\obj\Debug\SportsStore.UnitTest.pdb

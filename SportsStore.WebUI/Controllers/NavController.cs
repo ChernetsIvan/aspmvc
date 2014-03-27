@@ -17,23 +17,14 @@ namespace SportsStore.WebUI.Controllers
             repository = repo;
         }
 
-<<<<<<< HEAD
         public ViewResult Menu(string category = null)
         {
             ViewBag.SelectedCategory = category;
-=======
-        public PartialViewResult Menu()
-        {
->>>>>>> styling
             IEnumerable<string> categories = repository.Products
                 .Select(x => x.Category)
                 .Distinct()
                 .OrderBy(x => x);
-<<<<<<< HEAD
             return View(categories);
-=======
-            return PartialView(categories);
->>>>>>> styling
         }
 
     }

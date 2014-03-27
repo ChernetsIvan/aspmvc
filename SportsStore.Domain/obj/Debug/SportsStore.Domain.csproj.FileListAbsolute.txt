@@ -27,3 +27,11 @@ D:\IvanyCH\!Code\7sem\ExpressForWeb2012\SportsStore\SportsStore.Domain\bin\Debug
 D:\IvanyCH\!Code\7sem\ExpressForWeb2012\SportsStore\SportsStore.Domain\obj\Debug\SportsStore.Domain.csprojResolveAssemblyReference.cache
 D:\IvanyCH\!Code\7sem\ExpressForWeb2012\SportsStore\SportsStore.Domain\obj\Debug\SportsStore.Domain.dll
 D:\IvanyCH\!Code\7sem\ExpressForWeb2012\SportsStore\SportsStore.Domain\obj\Debug\SportsStore.Domain.pdb
+E:\internett\SportsStore.Domain\bin\Debug\SportsStore.Domain.dll.config
+E:\internett\SportsStore.Domain\bin\Debug\SportsStore.Domain.dll
+E:\internett\SportsStore.Domain\bin\Debug\SportsStore.Domain.pdb
+E:\internett\SportsStore.Domain\bin\Debug\EntityFramework.dll
+E:\internett\SportsStore.Domain\bin\Debug\EntityFramework.xml
+E:\internett\SportsStore.Domain\obj\Debug\SportsStore.Domain.csprojResolveAssemblyReference.cache
+E:\internett\SportsStore.Domain\obj\Debug\SportsStore.Domain.dll
+E:\internett\SportsStore.Domain\obj\Debug\SportsStore.Domain.pdb
