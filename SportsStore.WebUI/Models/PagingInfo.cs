@@ -15,5 +15,10 @@ namespace SportsStore.WebUI.Models
                 return (int)Math.Ceiling((decimal)TotalItems / ItemsPerPage);
             }
         }
+
+	privare void Ret()
+	{
+		int s;
+	}
     }
 }
