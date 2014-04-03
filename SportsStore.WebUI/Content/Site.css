@@ -125,7 +125,7 @@ DIV.item H4 {
 } 
  
 
-
+/*разбиение по страницам*/
 DIV.pager {
 	text-align: right;
 	border-top: 2px solid silver;
@@ -147,7 +147,7 @@ DIV.pager A.selected {
 }
 
 
-
+/*меню слева*/
 DIV#categories A {
 	font: bold 1.1em "Arial Narrow" , "Franklin Gothic Medium" ,Arial;
 	display: block;
@@ -207,5 +207,10 @@ TFOOT TD {
 	background-color: #353535;
 	border: 1px solid black;
 	cursor: pointer;
-} 
+}
+
+.table td {
+	border-style: solid;
+	border-width: thin;
+}
 
