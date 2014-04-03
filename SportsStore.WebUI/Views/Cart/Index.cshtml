@@ -1,34 +1,58 @@
 ﻿@model SportsStore.WebUI.Models.CartIndexViewModel 
- 
 @{ 
-    ViewBag.Title = "Sports Store: Your Cart"; 
-} 
- 
-<h2>Your cart</h2> 
-<table width="90%" align="center"> 
-    <thead><tr> 
-        <th align="center">Quantity</th> 
-        <th align="left">Item</th> 
-        <th align="right">Price</th> 
-        <th align="right">Subtotal</th> 
-    </tr></thead> 
-    <tbody> 
-        @foreach(var line in Model.Cart.Lines) { 
-            <tr> 
-                <td align="center">@line.Quantity</td> 
-                <td align="left">@line.Product.Name</td> 
-                <td align="right">@line.Product.Price.ToString("c")</td> 
-                <td align="right">@((line.Quantity * line.Product.Price).ToString("c"))</td> 
-            </tr> 
-        } 
-    </tbody> 
-    <tfoot><tr> 
-        <td colspan="3" align="right">Total:</td> 
-        <td align="right"> 
-            @Model.Cart.ComputeTotalValue().ToString("c") 
-        </td> 
-    </tr></tfoot> 
-</table> 
-<p align="center" class="actionButtons"> 
-    <a href="@Model.ReturnUrl">Continue shopping</a> 
+	ViewBag.Title = "Sports Store: Your Cart"; 
+}
+
+<h2>Your cart</h2>
+<table width="90%" align="center">
+	<thead>
+		<tr>
+			<th align="center">Quantity</th>
+			<th align="center">Item</th>
+			<th align="center">Action</th>
+			<th align="center">Price</th>
+			<th align="center">Subtotal</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var line in Model.Cart.Lines)
+		{ 
+			<tr>
+				<td align="center">@line.Quantity</td>
+				<td align="center">@line.Product.Name</td>
+				<td align="center">
+					@using (Html.BeginForm("RemoveFromCart", "Cart"))
+					{
+						@Html.Hidden("ProductID", line.Product.ProductID.ToString())
+						@Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+						@Html.Hidden("all", false)			
+						<input class="actionButtons" type="submit" value="Remove" />		
+					}
+					@if (line.Quantity > 1)	
+					{			
+						using (Html.BeginForm("RemoveFromCart", "Cart"))
+						{
+							@Html.Hidden("ProductID", line.Product.ProductID.ToString())
+							@Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+							@Html.Hidden("all", true)			
+							<input class="actionButtons" type="submit" value="Remove all" /> 		
+						}
+					}										 
+				</td>
+				<td align="center">@line.Product.Price.ToString("c")</td>
+				<td align="center">@((line.Quantity * line.Product.Price).ToString("c"))</td>
+			</tr> 
+		}
+	</tbody>
+	<tfoot>
+		<tr>
+			<td colspan="4" align="right">Total:</td>
+			<td align="left">
+				@Model.Cart.ComputeTotalValue().ToString("c")
+			</td>
+		</tr>
+	</tfoot>
+</table>
+<p align="center" class="actionButtons">
+	<a href="@Model.ReturnUrl">Continue shopping</a>
 </p>

@@ -22,9 +22,23 @@ namespace SportsStore.Domain.Entities
 				line.Quantity += quantity;
 		}
 
-		public void RemoveLine(Product product)
+		public void RemoveLine(Product product, bool all)
 		{
-			lineCollection.RemoveAll(l => l.Product.ProductID == product.ProductID);
+			if (all)
+				lineCollection.RemoveAll(l => l.Product.ProductID == product.ProductID);
+			else
+			{
+				foreach(CartLine l in lineCollection)
+					if (l.Product.ProductID == product.ProductID)
+					{
+						l.Quantity--;
+						if (l.Quantity == 0)
+						{
+							lineCollection.Remove(l);
+							break;
+						}
+					}
+			}
 		}
 
 		public decimal ComputeTotalValue()

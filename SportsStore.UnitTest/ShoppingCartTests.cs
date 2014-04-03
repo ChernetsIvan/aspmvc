@@ -16,7 +16,8 @@ namespace SportsStore.UnitTest
 		[TestMethod] 
 		public void Can_Add_New_Lines() 
 		{ 
-			// Arrange - create some test products 			Product p1 = new Product { ProductID = 1, Name = "P1" }; 
+			// Arrange - create some test products
+			Product p1 = new Product { ProductID = 1, Name = "P1" }; 
 			Product p2 = new Product { ProductID = 2, Name = "P2" }; 
  			// Arrange - create a new cart 
 			Cart target = new Cart(); 
@@ -69,7 +70,7 @@ namespace SportsStore.UnitTest
 			target.AddItem(p2, 1); 
  
 			// Act 
-			target.RemoveLine(p2); 
+			target.RemoveLine(p2, true); 
  
 			// Assert 
 			Assert.AreEqual(target.Lines.Where(c => c.Product == p2).Count(), 0); 
@@ -96,7 +97,9 @@ namespace SportsStore.UnitTest
 		} 
 
 		[TestMethod] 
-		public void Can_Clear_Contents() 		{ 			// Arrange - create some test products 
+		public void Can_Clear_Contents() 
+		{ 
+			// Arrange - create some test products 
 			Product p1 = new Product { ProductID = 1, Name = "P1", Price = 100M }; 
 			Product p2 = new Product { ProductID = 2, Name = "P2", Price = 50M };  
 			// Arrange - create a new cart 

@@ -43,3 +43,11 @@ D:\IvanyCH\!Code\8sem\New folder\SportsStore.Domain\bin\Debug\EntityFramework.xm
 D:\IvanyCH\!Code\8sem\New folder\SportsStore.Domain\obj\Debug\SportsStore.Domain.csprojResolveAssemblyReference.cache
 D:\IvanyCH\!Code\8sem\New folder\SportsStore.Domain\obj\Debug\SportsStore.Domain.dll
 D:\IvanyCH\!Code\8sem\New folder\SportsStore.Domain\obj\Debug\SportsStore.Domain.pdb
+D:\IvanyCH\!Code\8sem\SportsStoreNOW\SportsStore.Domain\bin\Debug\SportsStore.Domain.dll.config
+D:\IvanyCH\!Code\8sem\SportsStoreNOW\SportsStore.Domain\bin\Debug\SportsStore.Domain.dll
+D:\IvanyCH\!Code\8sem\SportsStoreNOW\SportsStore.Domain\bin\Debug\SportsStore.Domain.pdb
+D:\IvanyCH\!Code\8sem\SportsStoreNOW\SportsStore.Domain\bin\Debug\EntityFramework.dll
+D:\IvanyCH\!Code\8sem\SportsStoreNOW\SportsStore.Domain\bin\Debug\EntityFramework.xml
+D:\IvanyCH\!Code\8sem\SportsStoreNOW\SportsStore.Domain\obj\Debug\SportsStore.Domain.csprojResolveAssemblyReference.cache
+D:\IvanyCH\!Code\8sem\SportsStoreNOW\SportsStore.Domain\obj\Debug\SportsStore.Domain.dll
+D:\IvanyCH\!Code\8sem\SportsStoreNOW\SportsStore.Domain\obj\Debug\SportsStore.Domain.pdb

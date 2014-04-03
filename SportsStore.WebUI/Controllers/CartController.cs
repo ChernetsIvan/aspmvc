@@ -28,14 +28,14 @@ namespace SportsStore.WebUI.Controllers
 			return RedirectToAction("Index", new { returnUrl });
 		}
 
-		public RedirectToRouteResult RemoveFromCart(int productId, string returnUrl)
+		public RedirectToRouteResult RemoveFromCart(int productId, string returnUrl, bool all)
 		{
 			Product product = repository.Products
 				.FirstOrDefault(p => p.ProductID == productId);
 
 			if (product != null)
 			{
-				GetCart().RemoveLine(product);
+				GetCart().RemoveLine(product, all);
 			}
 			return RedirectToAction("Index", new { returnUrl });
 		}
@@ -58,6 +58,7 @@ namespace SportsStore.WebUI.Controllers
 				Cart = GetCart(),
 				ReturnUrl = returnUrl
 			});
-		} 
+		} 
+
 	}
 }
