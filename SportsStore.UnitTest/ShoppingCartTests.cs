@@ -27,7 +27,7 @@ namespace SportsStore.UnitTest
 			target.AddItem(p2, 1); 
 			CartLine[] results = target.Lines.ToArray(); 
  
-			// Assert 
+			// Assert
 			Assert.AreEqual(results.Length, 2); 
 			Assert.AreEqual(results[0].Product, p1); 
 			Assert.AreEqual(results[1].Product, p2); 
