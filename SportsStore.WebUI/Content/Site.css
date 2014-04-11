@@ -221,7 +221,7 @@ TFOOT TD {
 	font-weight: bold;
 } 
 
-A.actionButtons , INPUT.actionButtons{
+A.actionButtons , INPUT.actionButtons SUBMIT.actionButtons{
 	color: White;
 	margin: .1em;
 	text-decoration: none;

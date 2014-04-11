@@ -1,7 +1,20 @@
-﻿@model SportsStore.WebUI.Models.Account.LogOnModel
+﻿@model SportsStore.WebUI.Models.LogOnVM
 
 @{
-    ViewBag.Title = "LogIn";
+    ViewBag.Title = "LogOn";
 }
 
-<h2>LogIn</h2>
+<h2>LogOn</h2>
+After log on, you will be able to add items to the cart.
+<div>
+	@using(Html.BeginForm("CheckAndResult","User"))
+	{
+		@Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+		<p>Login: @Html.TextBoxFor(vm => vm.Login)</p>
+        <p>Password: @Html.TextBoxFor(vm => vm.Password)</p>
+		<input type="submit" value="LogOn" class="actionsButtons" />
+	}
+</div>
+
+
+`

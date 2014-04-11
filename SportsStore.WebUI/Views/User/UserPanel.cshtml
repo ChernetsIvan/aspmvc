@@ -42,8 +42,10 @@
 			}
 		</div>
 		<div class="image">
-			<img src="@Url.Content("~/Images/UserView/UserPanel/" + Model.User.Photo + ".png")" title="Unknown Guest" />
-		</div>	
+			<a href="~/Views/User/PrivateOffice">
+				<img src="@Url.Content(Model.User.Photo)" title="It is your avatar. Click to go in private office to change it" />
+			</a>
+		</div>
 		<div class="label">
 			<h3>Hello, @Model.User.Login.ToString()</h3>
 		</div>

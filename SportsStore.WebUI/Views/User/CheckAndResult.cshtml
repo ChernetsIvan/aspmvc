@@ -1,0 +1,21 @@
+﻿@model SportsStore.WebUI.Models.UserViewModel
+@{
+    ViewBag.Title = "CheckAndResult";
+}
+
+<p>@Model.LogonResult</p>
+@if (Model.IsLogOn == true)
+{
+	<p>
+		Hello, <b>@Model.User.FIO</b>. Now you can begin shopping. See status of cart in user panel top.
+	</p>
+}
+else
+{
+	<p>
+		The logon had not performed. Try to logon again
+	</p>
+	<p class="actionButtons">
+		<a href="LogOn">LogOn</a>
+	</p>
+}

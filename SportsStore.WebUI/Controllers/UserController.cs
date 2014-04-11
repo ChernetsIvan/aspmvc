@@ -10,6 +10,10 @@ namespace SportsStore.WebUI.Controllers
     {
         private IUserRepository repository;
 
+		public const string LogonSuccess = "LogOn success!";
+		public const string PasswordIncorrect = "Typed password is incorrect!";
+		public const string LoginAndPassIncorrect = "Typed login and password are incorrect!";
+
 		public UserController(IUserRepository repo)
 		{
 			repository = repo;
@@ -17,24 +21,53 @@ namespace SportsStore.WebUI.Controllers
 
 		public ViewResult UserPanel(string returnUrl)
 		{
-			return View(new UserViewModel
-			{
-				User = GetUser(),
-				ReturnUrl = returnUrl
-			}
-			);
+			return View(GetUserVM());
 		}
 
-
-		private User GetUser()
+		public ViewResult CheckAndResult(LogOnVM inputVM, string returnUrl)
 		{
-			User user = (User)Session["User"];
-			if (user == null)
+			UserViewModel sessionUserVM = GetUserVM();
+			sessionUserVM.ReturnUrl = returnUrl;
+			sessionUserVM.IsLogOn = false;
+			User user = repository.Users
+				.FirstOrDefault(u => u.Login == inputVM.Login);
+			if (user != null)
 			{
-				user = new User();
-				Session["User"] = user;
+				if (user.Password == inputVM.Password)
+				{
+					sessionUserVM.IsLogOn = true;
+					sessionUserVM.User = new Domain.Entities.User(user);
+					sessionUserVM.LogonResult = LogonSuccess;
+					SetUserVM(sessionUserVM);
+				}
+				else
+				{
+					sessionUserVM.LogonResult = PasswordIncorrect;
+				}
 			}
-			return user;
+			else
+			{
+				sessionUserVM.LogonResult = LoginAndPassIncorrect;
+			}
+			return View(sessionUserVM);
+		}
+
+		private UserViewModel GetUserVM()
+		{
+			UserViewModel userVM = null;
+			try{ userVM = (UserViewModel)Session["UserVM"]; } catch { };
+			if (userVM == null)
+			{
+				User user = new Domain.Entities.User();
+				user.Login = "Guest";
+				userVM = new UserViewModel(user);
+				Session["UserVM"] = userVM;
+			}
+			return userVM;
+		}
+		private void SetUserVM(UserViewModel userVM)
+		{
+			Session["UserVM"] = userVM;
 		}
 
 		public ViewResult LogOn()
@@ -42,9 +75,12 @@ namespace SportsStore.WebUI.Controllers
 			return View();
 		}
 
-		public ViewResult LogOff()
+		public ActionResult LogOff()
 		{
-			return View();
+			UserViewModel uVM = GetUserVM();
+			uVM.IsLogOn = false;
+			SetUserVM(uVM);
+			return RedirectToAction("List", "Product");			
 		}
 
 		public ViewResult Register()

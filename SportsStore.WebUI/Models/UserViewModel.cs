@@ -8,12 +8,12 @@ namespace SportsStore.WebUI.Models
 		public User User { get; set; }
 		public string ReturnUrl { get; set; }
 		public bool IsLogOn { get; set; }
-		public int GuestImageID
+		public string LogonResult { get; set; }
+		public int GuestImageID	{ get { return RandomImage(); }	}
+
+		public UserViewModel(User user)
 		{
-			get
-			{
-				return RandomImage();
-			}
+			User = new User(user);
 		}
 
 		//Random Guest Photo
@@ -25,5 +25,24 @@ namespace SportsStore.WebUI.Models
 			return rand.Next(from, to);
 		}
 
+		/*
+		public User User { get; set; }
+		public string ReturnUrl { get; set; }
+		public bool IsLogOn { get; set; }
+		private int guestImageID = 1;
+		public int GuestImageID
+		{
+			get
+			{
+				if (guestImageID == (last + 1))
+					guestImageID = 1;
+				guestImageID++;
+				return guestImageID;
+			}
+		}
+
+		//last image
+		private int last = 7;
+		*/
 	}
 }

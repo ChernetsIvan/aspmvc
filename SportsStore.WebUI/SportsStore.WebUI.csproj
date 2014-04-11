@@ -120,6 +120,7 @@
     <Compile Include="Models\Account\LogOnModel.cs" />
     <Compile Include="Models\Account\RegisterModel.cs" />
     <Compile Include="Models\CartIndexViewModel.cs" />
+    <Compile Include="Models\LogOnVM.cs" />
     <Compile Include="Models\PagingInfo.cs" />
     <Compile Include="Models\ProductsListViewModel.cs" />
     <Compile Include="Models\UserViewModel.cs" />
@@ -221,6 +222,7 @@
     <Content Include="Views\User\PrivateOffice.cshtml" />
     <Content Include="Views\User\UserPanel.cshtml" />
     <Content Include="Views\User\LogOn.cshtml" />
+    <Content Include="Views\User\CheckAndResult.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
