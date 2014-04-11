@@ -80,7 +80,6 @@ BODY {
 } 
 
 
-
 DIV#header DIV.title, DIV.item H3, DIV.item H4, DIV.pager A {
 	font: bold 2em 'Arial Narrow' , 'Franklin Gothic Medium' , Arial;
 } 
@@ -88,11 +87,35 @@ DIV#header {
 	background-color: #444;
 	border-bottom: 2px solid #111;
 	color: White;
+	height: 5em;
 } 
-DIV#header DIV.title {
+DIV#header div.title {
 	font-size: 2em;
 	padding: .6em;
-} 
+	float: left;
+}
+DIV#header DIV.userPanel {
+	float: right;
+	padding: .6em;
+	font-family: 'Times New Roman';
+	color: #FFFFFF;
+	height: initial;
+}
+	DIV#header DIV.userPanel DIV.accountButs {
+		float: right;
+		margin-left:2em;
+	}
+	DIV#header DIV.userPanel DIV.button {
+		width:5ex;
+	}
+	DIV#header DIV.userPanel DIV.label {
+		float: right;
+		margin-right:2em;
+	}
+	DIV#header DIV.userPanel DIV.image {
+		height: 3.8em;
+		float:right;
+	}  
 DIV#content {
 	border-left: 2px solid gray;
 	margin-left: 9em;
@@ -198,8 +221,7 @@ TFOOT TD {
 	font-weight: bold;
 } 
 
-.actionButtons A, INPUT.actionButtons {
-	font: .8em Arial;
+A.actionButtons , INPUT.actionButtons{
 	color: White;
 	margin: .1em;
 	text-decoration: none;

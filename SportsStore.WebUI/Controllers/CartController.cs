@@ -6,7 +6,6 @@ using SportsStore.WebUI.Models;
 
 namespace SportsStore.WebUI.Controllers
 {
-
 	public class CartController : Controller
 	{
 		private IProductRepository repository;

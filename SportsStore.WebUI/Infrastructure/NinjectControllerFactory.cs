@@ -46,8 +46,8 @@ namespace SportsStore.WebUI.Infrastructure
 
             //указывает Ninject, что необходимо создавать экземпляры класса EfProductRepository для обсуживания
             //запросов к интерфейсу IProductRepository
-            ninjectKernel.Bind<IProductRepository>().To<EFProductRepository>();
 			ninjectKernel.Bind<IUserRepository>().To<EFUserRepository>();
+			ninjectKernel.Bind<IProductRepository>().To<EFProductRepository>();
         }
     }
 }

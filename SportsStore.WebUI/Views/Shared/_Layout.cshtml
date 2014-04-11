@@ -7,8 +7,12 @@
 </head>
 <body>
     <div id="header">
-        <div class="title">SPORTS STORE</div>
-    </div>
+        <div class="title">
+			SPORTS STORE 
+        </div> 
+		@{Html.RenderAction("UserPanel", "User");}
+	</div>
+	
     <div id="categories">
         @{Html.RenderAction("Menu", "Nav"); }
     </div>

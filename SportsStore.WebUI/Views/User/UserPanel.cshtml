@@ -1,0 +1,53 @@
+﻿@model SportsStore.WebUI.Models.UserViewModel
+
+@{
+    Layout = null;
+		//не забыть про отрисовать   К О Р З И Н У   ! ! !
+}
+
+<div id="header" class="userPanel">
+	@if(Model.IsLogOn==false)
+	{ 
+		<div class="accountButs">
+			@using (Html.BeginForm("LogOn", "User"))
+			{
+				@Html.Hidden("returnUrl", Request.Url.PathAndQuery) 
+				<input class="button" type="submit" value="Log On" /> 
+			}
+			@using (Html.BeginForm("Register", "User"))
+			{
+				@Html.Hidden("returnUrl", Request.Url.PathAndQuery) 
+				<input class="button" type="submit" value="Register" /> 
+			}
+		</div>
+		<div class="image">
+			<img src="@Url.Content("~/Images/UserView/UserPanel/" + Model.GuestImageID.ToString() + ".png")" title="Unknown Guest" />
+		</div>	
+		<div class="label">
+			<h3>Hello, Guest!</h3>	
+		</div>
+	}
+	else
+	{
+		<div class="accountButs">
+			@using (Html.BeginForm("LogOff", "User"))                           
+			{
+				@Html.Hidden("returnUrl", Request.Url.PathAndQuery) 
+				<input class="button" type="submit" value="Log Off" /> 
+			}
+			@using (Html.BeginForm("PrivateOffice", "User"))
+			{
+				@Html.Hidden("returnUrl", Request.Url.PathAndQuery) 
+				<input class="button" type="submit" value="Private Office" /> 
+			}
+		</div>
+		<div class="image">
+			<img src="@Url.Content("~/Images/UserView/UserPanel/" + Model.User.Photo + ".png")" title="Unknown Guest" />
+		</div>	
+		<div class="label">
+			<h3>Hello, @Model.User.Login.ToString()</h3>
+		</div>
+	}
+</div> 
+		
+
